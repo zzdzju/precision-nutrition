@@ -24,6 +24,27 @@
     el.addEventListener('click', function (e) { e.preventDefault(); openBox(); });
   });
 
+  /* 电话 / 微信快捷按钮：桌面悬停显示（CSS），触屏点击切换 */
+  if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('.cx-item'), function (item) {
+      var btn = item.querySelector('.cx-btn');
+      if (!btn) return;
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var was = item.classList.contains('is-show');
+        Array.prototype.forEach.call(document.querySelectorAll('.cx-item.is-show'), function (o) {
+          o.classList.remove('is-show');
+        });
+        if (!was) item.classList.add('is-show');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      Array.prototype.forEach.call(document.querySelectorAll('.cx-item.is-show'), function (item) {
+        if (!item.contains(e.target)) item.classList.remove('is-show');
+      });
+    });
+  }
+
   /* 表单：原型不提交，仅本地反馈 */
   var form = document.getElementById('consultForm');
   if (form) {
