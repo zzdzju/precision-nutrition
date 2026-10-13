@@ -1,7 +1,7 @@
 # 精准营养技术网
 
 静态站，双击 `index.html` 即可在浏览器打开，也可用任意静态服务器托管。
-线上地址：https://zzdzju.github.io/test-index/
+线上地址：https://zzdzju.github.io/precision-nutrition/
 
 ## 目录结构
 
