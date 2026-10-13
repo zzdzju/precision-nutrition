@@ -164,11 +164,11 @@ git push -u origin main
 
 ---
 
-## 一·九、git push 报 `remote: Permission to zzdzju/test-index.git denied` / 403
+## 一·九、git push 报 `remote: Permission to zzdzju/precision-nutrition.git denied` / 403
 
-**成因**：仓库已存在（你在网页建的 `test-index`，私有），认证身份也是 `zzdzju` 本人，但**当前 gh 里存的 PAT 只有读/建库等部分权限，没有这个私有库的"内容写入"权**——GitHub 对私有库 push 要求 token 带 `repo`（即 contents read/write）。所以 `gh auth setup-git` 让 git 复用该 token 时，GitHub 直接返回 **403 Permission denied**。
+**成因**：仓库已存在（你在网页建的 `precision-nutrition`，私有），认证身份也是 `zzdzju` 本人，但**当前 gh 里存的 PAT 只有读/建库等部分权限，没有这个私有库的"内容写入"权**——GitHub 对私有库 push 要求 token 带 `repo`（即 contents read/write）。所以 `gh auth setup-git` 让 git 复用该 token 时，GitHub 直接返回 **403 Permission denied**。
 
-**注意**：这是**权限**问题，不是网络、不是仓库名错（已实测 `origin` 正确指向 `.../zzdzju/test-index.git`）。
+**注意**：这是**权限**问题，不是网络、不是仓库名错（已实测 `origin` 正确指向 `.../zzdzju/precision-nutrition.git`）。
 
 **修法（重新发一个带 `repo` 全权的 PAT，再重登录）**：
 
@@ -189,7 +189,7 @@ git push -u origin main
    ```
    > `origin` 已存在且指向正确，无需再 `git remote add`。若之前没跑过 `gh auth setup-git`，先跑一次再 push。
 
-**成功标志**：终端出现 `main -> main` / `Writing objects: 100%` 且显示 `https://github.com/zzdzju/test-index.git`。
+**成功标志**：终端出现 `main -> main` / `Writing objects: 100%` 且显示 `https://github.com/zzdzju/precision-nutrition.git`。
 
 **预判**：push 直连 `github.com`，国内可能再超时。若报 `connection failed / timeout`，同窗口先设代理再重跑 `git push`：
 `set HTTPS_PROXY=http://127.0.0.1:7890`（端口换成你本地代理软件显示值）。
@@ -230,7 +230,7 @@ git push -u origin main
 2. 复制公钥：`type %USERPROFILE%\.ssh\id_ed25519.pub`，到 GitHub → Settings → SSH and GPG keys → New SSH key 粘贴。
 3. 改远程为 SSH + 强制 443：
    ```bat
-   git remote set-url origin git@github.com:zzdzju/test-index.git
+   git remote set-url origin git@github.com:zzdzju/precision-nutrition.git
    ```
 4. 新建/编辑 `C:\Users\12931\.ssh\config`，写入：
    ```
@@ -343,7 +343,7 @@ GitHub Pages 会在推送后自动重新部署（通常几十秒内生效）。
 用 GitHub Contents API 把文件逐个 PUT 上传**，不依赖你本机网络。
 
 **已完成（2026-09-15）**：
-- 仓库 `zzdzju/test-index`（你网页建的，Private）已收到全部 **37 个文件**
+- 仓库 `zzdzju/precision-nutrition`（你网页建的，Private）已收到全部 **37 个文件**
   （index.html + 27 个详情页 + assets 2 个 + .nojekyll + .gitignore + README + 本指南 + build.py）。
 - 校验通过：`index.html` 41304 字节、`pages/` 下 27 个详情页齐全、临时上传脚本已清理。
 - 本地临时文件（`_upload.py`/`_cleanup.py` 等）已删除，工作目录干净。
@@ -356,17 +356,17 @@ GitHub Pages 会在推送后自动重新部署（通常几十秒内生效）。
 **做法（任选其一）**：
 
 1. **网页手动开（最省事，2 下）**：
-   进 `https://github.com/zzdzju/test-index` → **Settings → Pages** →
+   进 `https://github.com/zzdzju/precision-nutrition` → **Settings → Pages** →
    Source 选 **Deploy from a branch** → Branch 选 **main** / folder **/ (root)** → **Save**。
    若仓库是 Private 且免费账号，这里会提示需改 Public → 先去
    **Settings → General → 最底部 Change repository visibility → Public**。
 
 2. **让我用 API 开（你需给带 Pages 权限的 token）**：
    重发一个 fine-grained token，在 Repository permissions 里**额外把 `Pages` 设为 Read and write**
-   （Contents 保持 Read and write），仅授权 `test-index` 单库，发我后我调
-   `POST /repos/zzdzju/test-index/pages` 开启。
+   （Contents 保持 Read and write），仅授权 `precision-nutrition` 单库，发我后我调
+   `POST /repos/zzdzju/precision-nutrition/pages` 开启。
 
-**上线地址**：`https://zzdzju.github.io/test-index/`（部署后约 1–2 分钟生效）。
+**上线地址**：`https://zzdzju.github.io/precision-nutrition/`（部署后约 1–2 分钟生效）。
 
 **重要提醒**：
 - 你给的 token 权限较宽（该库 admin），**上传完成后请立即到 GitHub 撤销它**
