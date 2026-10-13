@@ -145,6 +145,12 @@ a{color:inherit;text-decoration:none}
 }
 .cx-num:hover{text-decoration:underline}
 .cx-tip{display:block;margin-top:7px;font-size:11.5px;color:#a5a5a5}
+/* PC（有鼠标的设备）：电话号码为纯文本展示，不提示拨打；触屏设备保留可拨打链接 */
+@media (hover: hover) and (pointer: fine){
+  .cx-num{pointer-events:none;cursor:default}
+  .cx-num:hover{text-decoration:none}
+  .cx-tip{display:none}
+}
 .cx-qr{width:134px;height:134px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:6px;border-radius:3px}
 .cx-qr .qr-img,.cx-qr svg{width:100%;height:100%;display:block;object-fit:contain}
 .cx-item.is-show .cx-pop{opacity:1;visibility:visible;transform:translate(0,-50%)}
