@@ -63,6 +63,28 @@
 
 <div class="consult" id="consult">
   <button class="consult-tab" id="consultTab" type="button" aria-label="打开顾客咨询">顾客咨询</button>
+  <div class="consult-extras">
+    <div class="cx-item">
+      <button class="cx-btn" type="button" data-cx="phone" aria-label="电话咨询">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </button>
+      <div class="cx-pop">
+        <strong>电话咨询</strong>
+        <a class="cx-num" href="tel:16710241939">167 1024 1939</a>
+        <span class="cx-tip">点击号码可直接拨打</span>
+      </div>
+    </div>
+    <div class="cx-item">
+      <button class="cx-btn" type="button" data-cx="wechat" aria-label="微信咨询">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5c-1.53 0-3-.4-4.3-1.1L3 20l1.1-5.2A8.38 8.38 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/><path d="M8.5 11.5h.01M12.5 11.5h.01M16.5 11.5h.01"/></svg>
+      </button>
+      <div class="cx-pop cx-pop-qr">
+        <strong>微信咨询</strong>
+        <div class="cx-qr"><img class="qr-img" src="../assets/wechat-qr.png" alt="微信二维码"></div>
+        <span class="cx-tip">扫码加微信咨询</span>
+      </div>
+    </div>
+  </div>
   <div class="consult-panel" id="consultPanel">
     <div class="cp-head">
       <strong>顾客咨询</strong>
@@ -96,18 +118,7 @@
 
 
 <div class="side-tools">
-  <span class="tool-wrap">
-    <a class="tool" href="tel:16710241939" title="电话咨询">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2.2 2A15 15 0 0 1 4 5.2A2 2 0 0 1 6 3z"/></svg>
-    </a>
-    <span class="tool-tip">电话咨询</span>
-  </span>
-  <span class="tool-wrap">
-    <button class="tool" type="button" title="微信咨询">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C5 4 2 6.7 2 10c0 1.9 1 3.5 2.7 4.6L4 17.5l3-1.6c.6.1 1.3.2 2 .2"/><path d="M15 9c-3.9 0-7 2.5-7 5.6s3.1 5.6 7 5.6c.8 0 1.5-.1 2.2-.3l2.8 1.5-.7-2.5c1.6-1 2.7-2.6 2.7-4.3C22 11.5 18.9 9 15 9z"/></svg>
-    </button>
-    <span class="tool-tip">微信咨询</span>
-  </span>
+  <!-- 电话 / 微信咨询已并入右侧顾客咨询浮窗（2026-10-13） -->
   <span class="tool-wrap">
     <button class="tool" id="toTop" type="button" title="回到顶部">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5"/><path d="M5.5 11.5 12 5l6.5 6.5"/></svg>
