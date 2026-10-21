@@ -207,6 +207,10 @@ a{color:inherit;text-decoration:none}
   border-radius:2px;font-weight:400;letter-spacing:1px;font-style:normal;
 }
 .article-en{color:var(--red);font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase}
+.article-sub{
+  font-size:17px;color:#777;font-weight:600;letter-spacing:.5px;
+  margin:0 0 4px;line-height:1.6;
+}
 .article-meta{
   margin:16px 0 28px;padding-bottom:16px;border-bottom:1px solid var(--line);
   font-size:13px;color:#9a9a9a;display:flex;gap:18px;flex-wrap:wrap;
@@ -276,6 +280,7 @@ a{color:inherit;text-decoration:none}
   .consult-panel{right:44px;width:min(320px,calc(100vw - 58px));padding:16px 16px 18px}
   .side-tools{right:8px;bottom:22px}
   .article h1{font-size:23px}
+  .article-sub{font-size:15px}
   .article p,.article ul li{font-size:15px}
   .foot-bar .wrap{justify-content:flex-start}
 }
