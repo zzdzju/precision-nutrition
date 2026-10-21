@@ -200,7 +200,7 @@ a{color:inherit;text-decoration:none}
 .crumb a:hover{color:var(--red)}
 .crumb .sep{color:#c9c9c9}
 .crumb .cur{color:#3d3d3d}
-.article-wrap{display:grid;grid-template-columns:minmax(0,1fr) 286px;gap:44px;padding:38px 0 10px}
+.article-wrap{display:grid;grid-template-columns:minmax(0,1fr) 286px;gap:44px;padding:38px 24px 10px}
 .article h1{font-size:30px;margin:0 0 10px;letter-spacing:1.5px;font-weight:700;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .draft-badge{
   font-size:11px;color:var(--red);border:1px solid currentColor;padding:2px 7px;
@@ -214,6 +214,9 @@ a{color:inherit;text-decoration:none}
 .article h2{
   font-size:19px;margin:32px 0 13px;padding-left:12px;border-left:3px solid var(--red);
   line-height:1.45;letter-spacing:.5px;
+}
+.article h3{
+  font-size:16.5px;margin:22px 0 10px;font-weight:700;color:#2c2c2c;letter-spacing:.4px;
 }
 .article p{margin:0 0 15px;font-size:15.5px;line-height:2.05;color:#333}
 .article ul{list-style:none;margin:0 0 16px;padding:0}
