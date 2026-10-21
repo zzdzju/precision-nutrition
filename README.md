@@ -7,7 +7,7 @@
 
 ```
 index.html            首页（顶部轮播 + 44 栏目网格 + 页脚）
-pages/*.html          44 个栏目详情页 + 4 个导航页（单位简介 / 新闻报道 / 意见建议 / 合作加盟）
+pages/*.html          44 个栏目详情页 + 4 个导航页 + 11 篇重要原创文章全文页（单位简介 / 新闻报道 / 意见建议 / 合作加盟）
 assets/style.css      全站样式
 assets/site.js        轮播播放 / 咨询框 / 回到顶部等交互
 assets/wechat-qr.png  页脚微信二维码（换图后重跑 build.py 生效）
