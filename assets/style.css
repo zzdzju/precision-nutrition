@@ -238,6 +238,8 @@ a{color:inherit;text-decoration:none}
 }
 .book-img{margin:20px 0 8px;text-align:center}
 .book-img img{width:min(280px,72%);height:auto;border-radius:6px;border:1px solid #eee;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.cert-img{margin:20px 0 8px;text-align:center}
+.cert-img img{width:min(600px,94%);height:auto;border-radius:6px;border:1px solid #eee;box-shadow:0 4px 14px rgba(0,0,0,.12)}
 .article-nav{
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   margin-top:38px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:#8b8b8b;
